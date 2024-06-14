@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css?family=Spinnaker:700|Spinnaker:400");
+html {
+	min-height: 100%;
+	min-width: 100%;
+	font-size: 100%;
+}
+
+body {
+	position: relative;
+	overflow-x: hidden;
+	font-family: "Spinnaker", sans-serif;
+}
