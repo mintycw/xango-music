@@ -7,14 +7,14 @@ module.exports = {
 		}
 	},
 	theme: {
-		colors: {
-			text: "#1c0d07",
-			background: "#fcf6f4",
-			primary: "#cc643e",
-			secondary: "#e1ae9c",
-			accent: "#d78669"
-		},
 		extend: {
+			colors: {
+				text: "#1c0d07",
+				background: "#fcf6f4",
+				primary: "#cc643e",
+				secondary: "#e1ae9c",
+				accent: "#d78669"
+			},
 			fontSize: {
 				sm: "0.750rem",
 				base: "1rem",
