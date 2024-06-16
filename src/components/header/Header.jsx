@@ -37,6 +37,9 @@ function Header() {
 					</Link>
 				</div>
 				<div className="relative hidden justify-center gap-6 md:flex">
+					<Link to="/news" className="h-full hover:underline">
+						News
+					</Link>
 					{/* Catalogue dropdown */}
 					<div className="group relative">
 						<Link

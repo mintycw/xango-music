@@ -47,6 +47,9 @@ function MobileMenu({
 				</div>
 			</div>
 			<div className="flex w-full flex-col">
+				<Link to="/news" className="text-xl">
+					News
+				</Link>
 				<div className="flex h-16 w-full items-center justify-between">
 					<Link
 						to="/catalogue"

@@ -59,7 +59,7 @@ function Footer() {
 						<li>
 							<Link
 								target="_blank"
-								to="http://www.xmd.nl/"
+								to="/"
 								title="B2B for stores in the Benelux & labels worldwide"
 								className="duration-75 hover:text-primary hover:underline"
 							>
@@ -68,8 +68,7 @@ function Footer() {
 						</li>
 						<li>
 							<Link
-								target="_blank"
-								to="http://www.xangoma.eu/"
+								to="/contact"
 								title="News and information about music in general and about articles distributed by Xango Music"
 								className="duration-75 hover:text-primary hover:underline"
 							>
@@ -79,16 +78,26 @@ function Footer() {
 						<li>
 							<Link
 								target="_blank"
-								to="https://www.xangomusic.com/mailafriend.php?ref=https%3A//www.xangomusic.com/intro.php"
+								to=""
 								title="Share our website with a friend!"
 								className="duration-75 hover:text-primary hover:underline"
 							>
 								Privacy policy
 							</Link>
 						</li>
+						<li>
+							<Link
+								target="_blank"
+								to=""
+								title="Share our website with a friend!"
+								className="duration-75 hover:text-primary hover:underline"
+							>
+								Terms of Service
+							</Link>
+						</li>
 					</ul>
 				</div>
-				<div className="bg-gray-100 relative mb-20 flex items-start justify-center">
+				<div className="relative mb-20 flex items-start justify-center bg-gray-100">
 					<FacebookEmbed />
 				</div>
 				<div className="items-top flex flex-col items-center justify-center gap-2 text-text md:ml-8 md:flex-row md:items-start">

@@ -6,6 +6,7 @@ import Checkout from "./components/cart/Checkout";
 import Catalogue from "./pages/catalogue/Catalogue";
 import Product from "./pages/product/Product";
 import Contact from "./pages/contact/Contact";
+import News from "./pages/news/News";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/catalogue/:id" element={<Catalogue />} />
 				<Route path="/products/:id" element={<Product />} />
 				<Route path="/contact" element={<Contact />} />
+				<Route path="/news" element={<News />} />
 			</Routes>
 			<Footer />
 		</>
