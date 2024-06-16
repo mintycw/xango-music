@@ -6,18 +6,43 @@ import { FaShoppingBasket } from "react-icons/fa";
 
 function Item({
 	index,
-	vinyl,
-	title,
 	artist,
+	title,
 	halfStars,
 	totalReviews,
 	price,
-	image
+	image,
+	type,
+	region,
+	info,
+	label,
+	year,
+	mainstyle,
+	tracks
 }) {
 	const [onHover, setOnHover] = useState(false);
 
 	return (
-		<Link className="carousel-item relative z-10 flex w-40 flex-col md:w-52 lg:w-60">
+		<Link
+			to={`/products/${title}`}
+			state={{
+				title,
+				artist,
+	title,
+	halfStars,
+	totalReviews,
+	price,
+	image,
+	type,
+	region,
+	info,
+	label,
+	year,
+	mainstyle,
+	tracks
+			}}
+			className="carousel-item relative z-10 flex w-40 flex-col md:w-52 lg:w-60"
+		>
 			<div
 				onMouseEnter={() => setOnHover(true)}
 				onMouseLeave={() => setOnHover(false)}
