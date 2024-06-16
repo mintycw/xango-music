@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import placeholderImage from "../assets/images/placeholderImage.png";
-import placeholderImage2 from "../assets/images/placeholderImage2.png";
 import { Link } from "react-router-dom";
 import { FaShoppingBasket } from "react-icons/fa";
 
@@ -28,20 +26,20 @@ function Item({
 			state={{
 				title,
 				artist,
-	title,
-	halfStars,
-	totalReviews,
-	price,
-	image,
-	type,
-	region,
-	info,
-	label,
-	year,
-	mainstyle,
-	tracks
+				title,
+				halfStars,
+				totalReviews,
+				price,
+				image,
+				type,
+				region,
+				info,
+				label,
+				year,
+				mainstyle,
+				tracks
 			}}
-			className="carousel-item relative z-10 flex w-40 flex-col md:w-52 lg:w-60"
+			className="align carousel-item relative z-10 flex w-40 flex-col md:w-52 lg:w-60"
 		>
 			<div
 				onMouseEnter={() => setOnHover(true)}

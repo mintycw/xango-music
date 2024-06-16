@@ -6,7 +6,6 @@ import { IoSearch, IoMenu, IoCart, IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import Cart from "../cart/Cart";
-import { PiParallelogram } from "react-icons/pi";
 
 function Header() {
 	const [enableSearch, setEnableSearch] = useState(false);
@@ -17,6 +16,7 @@ function Header() {
 	const [showViewAll, setShowViewAll] = useState(false);
 
 	useEffect(() => {
+		console.log(showMenu, showCart);
 		if (showMenu || showCart) {
 			document.documentElement.style.overflow = "hidden";
 		} else {
