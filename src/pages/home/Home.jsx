@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import banner from "../../assets/images/promotion-banner.png";
 import Item from "../../components/Item";
+import itemsData from "../../database/items.json";
 
 function Home() {
 	const [selectedCategory, setSelectedCategory] = useState("vinyls");
@@ -30,19 +31,14 @@ function Home() {
 				</div>
 				<div className="z-0 px-8 md:px-32">
 					<div className="carousel carousel-center max-w-full space-x-4">
-						{Array(10)
-							.fill()
-							.map((_, index) => (
-								<Item
-									key={index}
-									index={index}
-									vinyl={
-										selectedCategory === "vinyls"
-											? true
-											: false
-									}
-								/>
-							))}
+						{itemsData.map((item, index) => (
+							<Item
+								key={item.title}
+								index={index}
+								vinyl={item.type === "Vinyl"}
+								{...item}
+							/>
+						))}
 					</div>
 				</div>
 			</div>

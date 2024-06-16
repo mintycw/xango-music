@@ -6,6 +6,7 @@ import { IoSearch, IoMenu, IoCart, IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import Cart from "../cart/Cart";
+import { PiParallelogram } from "react-icons/pi";
 
 function Header() {
 	const [enableSearch, setEnableSearch] = useState(false);
@@ -38,15 +39,21 @@ function Header() {
 				<div className="relative hidden justify-center gap-6 md:flex">
 					{/* Catalogue dropdown */}
 					<div className="group relative">
-						<span className="h-full hover:underline">
+						<Link
+							to="/catalogue"
+							className="h-full duration-300 hover:text-primary hover:underline"
+						>
 							Catalogue
-						</span>
-						<div className="absolute left-1/2 top-6 z-50 hidden h-min w-[70vw] -translate-x-1/2 transform grid-cols-3 gap-4 rounded bg-base-200 p-4 text-start shadow-md duration-100 group-hover:grid xl:grid-cols-4">
+						</Link>
+						<div className="absolute left-1/2 top-full z-50 hidden max-h-[70vh] w-[70vw] -translate-x-1/2 transform grid-cols-3 gap-4 overflow-y-auto rounded bg-base-200 p-4 text-start shadow-md duration-100 group-hover:grid xl:grid-cols-4">
 							<div className="h-fit cursor-pointer rounded">
 								<div className="flex w-full items-center justify-between">
-									<span className="flex h-10 w-full flex-row items-center text-sm hover:underline md:text-base">
+									<Link
+										to="/catalogue/all"
+										className="flex h-10 w-full flex-row items-center text-sm hover:underline md:text-base"
+									>
 										View all
-									</span>
+									</Link>
 									<button
 										onClick={() =>
 											setShowViewAll(!showViewAll)
@@ -59,15 +66,21 @@ function Header() {
 									</button>
 								</div>
 								<ul
-									className={`ml-2 flex-col gap-2 overflow-hidden border-l transition-all duration-300 ${showViewAll ? "max-h-full px-4 py-2" : "max-h-0"} `}
+									className={`ml-2 flex-col gap-2 overflow-hidden border-l border-primary transition-all duration-300 ${showViewAll ? "max-h-full px-4 py-2" : "max-h-0"} `}
 								>
-									<li className="text-sm hover:underline">
-										<Link className="hover:underline">
+									<li className="text-sm hover:underline md:text-base">
+										<Link
+											to="/catalogue/records"
+											className="hover:underline"
+										>
 											Records
 										</Link>
 									</li>
-									<li className="text-sm hover:underline">
-										<Link className="hover:underline">
+									<li className="text-sm hover:underline md:text-base">
+										<Link
+											to="/catalogue/vinyls"
+											className="hover:underline"
+										>
 											Vinyls
 										</Link>
 									</li>
@@ -84,15 +97,28 @@ function Header() {
 					</div>
 					{/* View all dropdown */}
 					<div className="group relative">
-						<Link className="h-full hover:underline">
+						<Link
+							to="/catalogue/new"
+							className="h-full hover:underline"
+						>
 							New Releases
 						</Link>
-						<div className="absolute left-1/2 top-6 z-50 hidden h-min w-min -translate-x-1/2 transform flex-col gap-4 rounded bg-base-200 p-4 text-start shadow-md duration-100 group-hover:flex">
+						<div className="absolute left-1/2 top-full z-50 hidden max-h-[70vh] w-min -translate-x-1/2 transform flex-col gap-4 overflow-y-auto rounded bg-base-200 p-4 text-start shadow-md duration-100 group-hover:flex">
 							<div className="top-full flex-col gap-2 rounded bg-base-200 px-4 py-2 shadow-lg">
-								<Link className="hover:underline">Records</Link>
+								<Link
+									to="/catalogue/new/records"
+									className="hover:underline"
+								>
+									Records
+								</Link>
 							</div>
 							<div className="top-full flex-col gap-2 rounded bg-base-200 px-4 py-2 shadow-lg">
-								<Link className="hover:underline">Vinyls</Link>
+								<Link
+									to="/catalogue/new/vinyls"
+									className="hover:underline"
+								>
+									Vinyls
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -145,6 +171,7 @@ function Header() {
 					showViewAll={showViewAll}
 					setShowViewAll={setShowViewAll}
 					categories={categories}
+					setShowCart={setShowCart}
 				/>
 			)}
 			{showCart && <Cart setShowCart={setShowCart} />}

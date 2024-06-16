@@ -13,7 +13,8 @@ function MobileMenu({
 	showViewAll,
 	setShowViewAll,
 	searchValue,
-	setSearchValue
+	setSearchValue,
+	setShowCart
 }) {
 	return (
 		<div className="fixed left-0 top-0 z-50 flex h-screen w-screen flex-col gap-16 overflow-y-auto bg-base-200 px-10 py-4 md:hidden">
@@ -34,19 +35,26 @@ function MobileMenu({
 						className="relative h-10 w-full rounded-full border bg-transparent pl-2 pr-9 transition-all duration-300"
 						placeholder="Search..."
 					/>
-					<IoSearch className="text-gray-400 absolute right-2 top-1/2 -translate-y-1/2 transform" />
+					<IoSearch className="absolute right-2 top-1/2 -translate-y-1/2 transform text-gray-400" />
 				</div>
 				<div className="w-7 shrink-0">
-					<button className="flex size-10 items-center justify-center rounded-full border shadow-lg duration-300 hover:bg-base-300 hover:shadow-2xl">
+					<button
+						onClick={() => setShowCart(true)}
+						className="flex size-10 items-center justify-center rounded-full border shadow-lg duration-300 hover:bg-base-300 hover:shadow-2xl"
+					>
 						<IoCart className="size-7" />
 					</button>
 				</div>
 			</div>
 			<div className="flex w-full flex-col">
 				<div className="flex h-16 w-full items-center justify-between">
-					<span className="flex h-full w-full flex-row items-center text-xl hover:underline">
+					<Link
+						to="/catalogue"
+						onClick={() => setShowMenu(false)}
+						className="flex h-full w-full flex-row items-center text-xl hover:underline"
+					>
 						Catalogue
-					</span>
+					</Link>
 					<button
 						onClick={() => setShowCategories(!showCategories)}
 						className="flex w-7 items-center justify-center"

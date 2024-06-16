@@ -26,18 +26,26 @@ function CatelogueItem({ category, subcategories }) {
 			</div>
 			{/* Subcategory menu */}
 			<ul
-				className={`ml-2 flex-col gap-2 overflow-hidden border-l transition-all duration-300 ${
+				className={`ml-2 flex-col gap-2 overflow-hidden border-l border-primary transition-all duration-300 ${
 					showMenu ? "max-h-full px-4 py-2" : "max-h-0 px-4 py-0"
 				}`}
 			>
-				{subcategories.map((subcategory, index) => (
-					<li
-						key={index}
-						className={`text-sm hover:underline md:text-base ${showMenu ? "block" : "hidden"}`}
-					>
-						<Link to="#">{subcategory}</Link>
-					</li>
-				))}
+				{subcategories.map((subcategory, index) => {
+					let urlFriendlyStr = subcategory
+						.toLowerCase()
+						.replace(/\s/g, "-");
+
+					return (
+						<li
+							key={index}
+							className={`text-sm hover:underline md:text-base ${showMenu ? "block" : "hidden"}`}
+						>
+							<Link to={`/catalogue/${urlFriendlyStr}`}>
+								{subcategory}
+							</Link>
+						</li>
+					);
+				})}
 			</ul>
 		</div>
 	);

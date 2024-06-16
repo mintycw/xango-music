@@ -1,0 +1,37 @@
+{
+	"Sort by": [
+		"Best selling",
+		"Alphabetically, A-Z",
+		"Alphabetically, Z-A",
+		"Price, low to high",
+		"Price, high to low",
+		"Date, old to new",
+		"Date, new to old"
+	],
+	"Region": [
+		"World Music",
+		"Jazz",
+		"Europe",
+		"Gypsy Music",
+		"Jewish Music",
+		"North America",
+		"Caribbean",
+		"Reggae",
+		"Latin America",
+		"Latin Music",
+		"Tango",
+		"Brasil",
+		"Africa",
+		"Middle East",
+		"Asia",
+		"Oceania"
+	],
+	"Type": ["CD", "Vinyl", "Download", "Merchandise"],
+	"Price": [
+		"Under €10",
+		"€10 to €20",
+		"€20 to €50",
+		"€50 to €100",
+		"€100 and above"
+	]
+}
