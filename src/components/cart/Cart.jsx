@@ -34,7 +34,7 @@ function Cart({ setShowCart }) {
 						<CartItem />
 					</div>
 				</div>
-				<div className="fixed bottom-0 right-0 box-border w-1/2 max-w-screen-sm bg-primary p-4 duration-300 hover:brightness-75 lg:w-1/3">
+				<div className="fixed bottom-0 right-0 box-border w-full max-w-screen-sm bg-primary p-4 duration-300 hover:brightness-75 md:w-1/2 lg:w-1/3">
 					<Link
 						to="/checkout"
 						onClick={() => setShowCart(false)}

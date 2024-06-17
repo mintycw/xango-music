@@ -94,7 +94,7 @@ function Product() {
 						<h3>Reviews</h3>
 						<div className="flex flex-row items-center gap-2">
 							<div className="rating rating-half rating-md">
-								{[...Array(10)].map((_, i) => (
+								{[...Array(5)].map((_, i) => (
 									<input
 										key={i}
 										type="radio"
@@ -110,7 +110,7 @@ function Product() {
 							</span>
 						</div>
 						<div className="flex w-full flex-col gap-4">
-							<div>
+							<div className="flex items-center">
 								<span>Rate the Product</span>
 								<div className="rating rating-half rating-md">
 									<input
@@ -118,7 +118,7 @@ function Product() {
 										name={`review-rating-${state.title}`}
 										className="rating-hidden"
 									/>
-									{[...Array(10)].map((_, i) => (
+									{[...Array(5)].map((_, i) => (
 										<input
 											key={i}
 											type="radio"
